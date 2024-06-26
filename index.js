@@ -17,6 +17,10 @@ const salt = genSaltSync(10);
 
 const USERS = [];
 
+app.get("/", (req, res) => {
+	return res.status(200).json({ message: "Hello World" });
+});
+
 // Create user in Stream Chat
 app.post("/register", async (req, res) => {
 	const { email, password } = req.body;
